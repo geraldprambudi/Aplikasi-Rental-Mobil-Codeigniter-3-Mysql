@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Selamat Datang </h1>
+    <h1 class="h3 mb-4 text-gray-800">Selamat Datang <span class="text-danger"><?= $user['username']; ?> </span></h1>
 
     <?php if (validation_errors()) : ?>
         <div class="alert alert-danger" role="alert">
@@ -36,8 +36,8 @@
                         <td><?= $m['tahun']; ?></td>
                         <td><?= $m['status']; ?></td>
                         <td>
-                            <a href="<?= base_url('mobil/edit/') . $m['id']; ?>" class="btn btn-primary">edit</a>
-                            <a href="<?= base_url('mobil/hapus/') . $m['id']; ?>" class="btn btn-primary">delete</a>
+                            <a href="<?= base_url('mobil/edit/') . $m['id']; ?>" class="btn btn-danger">edit</a>
+                            <a href="<?= base_url('mobil/hapus/') . $m['id']; ?>" class="btn btn-danger">delete</a>
 
                         </td>
                     </tr>
